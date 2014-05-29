@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+   	<form action="/posts/<%= post.id %>" method="post">
+   		<fieldset>
+        <input type="hidden" name="_method" value="PUT"/>
+	   		<input type="text" placeholder="title" name="title" value="<%= post.title %>"><br>
+	   		<input type="text" placeholder="body" name="body" value="<%= post.body %>"><br>
+	   		<input type="submit">
+   		</fieldset>
+   	</form>
+  </body>
+</html>

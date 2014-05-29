@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <a href="/posts/">home</a>
+    <h1><%= title %></h1><small><%= post.createdAt %></small>
+   	<p><%= post.body %></p>
+    <a href="/posts/<%= post.id %>/edit">edit</a>
+    <form action="/posts/<%= post.id %>" method="post">
+      <input type="hidden" name="_method" value="DELETE"/>
+      <input class='button' type="submit" value='delete'>
+    </form>
+  </body>
+  <style>
+    .button {
+      display:;
+      background:none!important;
+      border:none; 
+      padding:0!important;
+      /*border is optional*/
+      border-bottom:1px solid #00B7FF;
+      color: #00B7FF; 
+    }
+  </style>
+</html>
+
